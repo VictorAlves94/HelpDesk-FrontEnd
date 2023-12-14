@@ -4,8 +4,7 @@ import { NavComponent } from './components/nav/nav.component';
 
 const routes: Routes = [
   {
-    path: 'login',
-    component: NavComponent
+    path: '',component: NavComponent
   }
 ];
 
