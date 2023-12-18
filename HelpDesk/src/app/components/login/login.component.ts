@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Credenciais } from '../../Models/credenciais';
 import { FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -16,23 +17,22 @@ export class LoginComponent implements OnInit{
   }
   email = new FormControl(null,Validators.email);
   senha = new FormControl(null,Validators.minLength(3));
-  constructor(private toast: ToastrService){}
-  ngOnInit(): void {
+  constructor(
+    private toast: ToastrService,
+     private service: AuthService){}
+  ngOnInit(): void {}
 
-    
-  }
   logar(){
-    this.toast.error('Usúario e/ou senha invalidos', 'Login')
-    this.creds.senha = '';
+    this.service.authenticate(this.creds).subscribe(resposta =>{
+      console.table('HEADER ' + resposta)
+    this.toast.info(resposta.headers.get('Authorization'))
+   })
 
   }
   validaCampos():boolean{
-    if(this.email.valid && this.senha.valid){
-      return true;
-    }
-    else{
-      return false;
-    }
+    return this.email.valid && this.senha.valid
+    
+    
   }
 
 
