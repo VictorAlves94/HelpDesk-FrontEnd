@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit{
 
   logar(){
     this.service.authenticate(this.creds).subscribe(resposta =>{
-      console.table('HEADER ' + resposta)
+      console.table('HEADER ' + resposta.headers.get('Authorization'))
     this.toast.info(resposta.headers.get('Authorization'))
    })
 
