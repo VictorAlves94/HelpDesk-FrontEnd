@@ -21,14 +21,18 @@ export class AuthService {
   }
 
   successfulLogin(authToken: string){
-    localStorage.setItem('tokken', authToken);
+    localStorage.setItem('token', authToken);
   }
 
   isAuthenticated(){
-    let token = localStorage.getItem('tokken')
+    let token = localStorage.getItem('token')
     if(token != null){
     return !this.jwtService.isTokenExpired(token)
     }
     return false
+  }
+  logout(){
+    localStorage.clear();
+
   }
 }
