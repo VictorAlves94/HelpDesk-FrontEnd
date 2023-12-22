@@ -5,15 +5,17 @@
         <img class="fullWidth" src="assets/img/cadastro1.jpg" alt="Help Desk - Dicas de um DEV">
 
         <section class="section">
-            <mat-checkbox class="margin">Admin</mat-checkbox>
-            <mat-checkbox class="margin">Cliente</mat-checkbox>
-            <mat-checkbox class="margin">Tecnico</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(0)" class="margin">Admin</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" class="margin">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin">Tecnico</mat-checkbox>
           </section>
 
           
             <mat-form-field class="fullWidth" appearance="fill">
               <mat-label>Nome</mat-label>
               <input 
+              [(ngModel)]="tecnico.nome"
+              name="nome"
               [formControl]="nome"
               required
               matInput 
@@ -28,6 +30,8 @@
             <mat-form-field class="fullWidth" appearance="fill">
               <mat-label>Cpf</mat-label>
               <input 
+              [(ngModel)]="tecnico.cpf"
+              name="cpf"
               [formControl]="cpf"
               required
               matInput
@@ -42,6 +46,8 @@
             <mat-form-field class="fullWidth" appearance="fill">
               <mat-label>E-mail</mat-label>
               <input 
+              [(ngModel)]="tecnico.email"
+              name="email"
               matInput 
               [formControl]="email"
               required
@@ -54,6 +60,8 @@
             <mat-form-field class="fullWidth" appearance="fill">
               <mat-label>senha</mat-label>
               <input
+              [(ngModel)]="tecnico.senha"
+              name="senha"
               [formControl]="senha"
               required 
               type="password" matInput
@@ -63,7 +71,7 @@
                 </span></mat-icon>
             </mat-form-field>
 
-            <button [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
+            <button (click)="create()" [disabled]="!validaCampos()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Cadastrar</button>
             <button routerLink="../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Cancelar</button>
           
     </form>
