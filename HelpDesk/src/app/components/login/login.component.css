@@ -25,5 +25,9 @@ img{
     width: 100%;
 }
 button  {
+    color: rgba(0,212,255,1) !important ;
     margin-top: 1.5rem;
+}
+button:hover{
+    background-color:rgb(47, 109, 163)!important;
 }
