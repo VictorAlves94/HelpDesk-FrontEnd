@@ -33,6 +33,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthInterceptor, AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico-create/tecnico-create.component';
+import { NgxMaskModule} from 'ngx-mask';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { TecnicoCreateComponent } from './components/tecnico-create/tecnico-crea
       timeOut: 4000,
       closeButton: true,
       progressBar:true
-    })
+    }),
+    NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]
