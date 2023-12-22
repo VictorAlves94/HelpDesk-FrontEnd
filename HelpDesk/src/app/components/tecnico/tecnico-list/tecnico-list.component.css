@@ -11,11 +11,16 @@ table {
   }
   button{
         width: 100%;
-
-
+        color: rgba(0,212,255,1) !important;
+        
   }
+  button:hover{
+    background-color: rgb(47, 109, 163);
+  }
+
   h1{
     width: 100%;
     text-align: center;
     margin-bottom: 2rem;
+    color: rgba(0,212,255,1);
   }
