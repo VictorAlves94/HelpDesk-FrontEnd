@@ -24,3 +24,10 @@ table {
     margin-bottom: 2rem;
     color: rgba(0,212,255,1);
   }
+
+  .edit{
+    color:aqua;
+  }
+  .delete{
+    color: red;
+  }

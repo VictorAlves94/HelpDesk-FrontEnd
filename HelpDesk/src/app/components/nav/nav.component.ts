@@ -13,7 +13,7 @@ export class NavComponent implements OnInit{
     private authService: AuthService,
     private toast: ToastrService){}
   ngOnInit():void {
-    this.router.navigate(['tecnicos/create'])
+    this.router.navigate(['tecnicos'])
 
     
   }
