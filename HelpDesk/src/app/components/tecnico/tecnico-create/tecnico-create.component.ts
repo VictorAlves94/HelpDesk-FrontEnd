@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { TecnicoService } from '../../services/tecnico.service';
-import { Tecnico } from '../../Models/tecnico';
+import { TecnicoService } from '../../../services/tecnico.service';
+import { Tecnico } from '../../../Models/tecnico';
 import { Toast, ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 
