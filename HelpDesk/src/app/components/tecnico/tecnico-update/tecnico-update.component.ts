@@ -17,7 +17,7 @@ export class TecnicoUpdateComponent implements OnInit{
     cpf: '',
     email:'',
     senha: '',
-    perfis:[],
+    perfils:[],
     dataCriacao:''
   }
 
@@ -36,22 +36,20 @@ export class TecnicoUpdateComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.tecnico.id =this.route.snapshot.paramMap.get('id');
+    this.tecnico.id = this.route.snapshot.paramMap.get('id');
     this.findById();
+    
   }
-
   findById():void{
-    this.service.findById(this.tecnico.id).subscribe(resposta=>
-    {
-      resposta.perfis = [];
+    this.service.findById(this.tecnico.id).subscribe(resposta => {
+      resposta.perfils = [];
       this.tecnico = resposta;
     })
   }
 
-
   update():void {
     this.service.update(this.tecnico).subscribe(()=>{
-      this.toast.success('Técnico atualizado com sucesso!', 'Update');
+      this.toast.success('Técnico atualizado com sucesso!', 'Atualizar');
       this.router.navigate(['tecnicos'])
     },ex => {
     if(ex.error.errors){
@@ -69,12 +67,14 @@ export class TecnicoUpdateComponent implements OnInit{
   }
 
   addPerfil(perfil: any):void{
-    if(this.tecnico.perfis.includes(perfil)){
-      this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil),1);
-      console.log(this.tecnico.perfis);
-    }else{this.tecnico.perfis.push(perfil);
-      console.log(this.tecnico.perfis);}
+    if(this.tecnico.perfils.includes(perfil)){
+      this.tecnico.perfils.splice(this.tecnico.perfils.indexOf(perfil),1);
+      console.log(this.tecnico.perfils);
+    }else{this.tecnico.perfils.push(perfil);
+      console.log(this.tecnico.perfils);}
   }
 }
+
+
 
 

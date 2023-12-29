@@ -24,7 +24,7 @@ export class TecnicoService {
   }
 
   update(tecnico:Tecnico):Observable<Tecnico>{
-    return this.http.put<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${tecnico.id}`,tecnico)
+    return this.http.put<Tecnico>(`${API_CONFIG.baseUrl}/tecnicos/${tecnico.id}`,tecnico);
 
   }
 
