@@ -37,4 +37,9 @@ export class ClienteListComponent implements OnInit{
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
+  excluir(event: Event){
+    console.log("CLICOU");
+    
+  }
+
 }
