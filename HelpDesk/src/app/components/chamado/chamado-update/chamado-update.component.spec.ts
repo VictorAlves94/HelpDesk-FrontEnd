@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChamadosUpdateComponent } from './chamados-update.component';
+import { ChamadoUpdateComponent } from './chamado-update.component';
 
-describe('ChamadosUpdateComponent', () => {
-  let component: ChamadosUpdateComponent;
-  let fixture: ComponentFixture<ChamadosUpdateComponent>;
+describe('ChamadoUpdateComponent', () => {
+  let component: ChamadoUpdateComponent;
+  let fixture: ComponentFixture<ChamadoUpdateComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ChamadosUpdateComponent]
+      declarations: [ChamadoUpdateComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(ChamadosUpdateComponent);
+    fixture = TestBed.createComponent(ChamadoUpdateComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
