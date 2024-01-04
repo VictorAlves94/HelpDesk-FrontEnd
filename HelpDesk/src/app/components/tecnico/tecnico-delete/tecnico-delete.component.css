@@ -1,0 +1,38 @@
+.container{
+    width: 35rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1.6rem;
+}
+.fullWidth{
+    width: 100%;
+}
+h1 , p{
+    text-align: center;
+    color: rgba(0,212,255,1) !important;
+}
+img{
+    height: 12rem;
+    margin: auto;
+    border-radius: 1.5rem ;
+}
+.section{
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+button{
+    margin-top: .5rem;
+    background-color: #2c2c2c !important;
+}
+button:hover{
+    background-color:rgb(47, 109, 163)!important;
+}
+p{
+    margin-top: 4rem;
+    opacity: .5 ;
+}
+mat-icon{
+    opacity: .8;
+}
+
