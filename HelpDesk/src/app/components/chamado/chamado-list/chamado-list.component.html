@@ -8,13 +8,13 @@
     </mat-form-field>
 
     <mat-radio-group >
-        <mat-radio-button >Aberto</mat-radio-button>
-        <mat-radio-button >Andamento</mat-radio-button>
-        <mat-radio-button >Encerrado</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus('Aberto')"  value="0">Aberto</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus('Andamento')"  value="1">Andamento</mat-radio-button>
+        <mat-radio-button (click)="orderByStatus('Encerrado')"  value="2">Encerrado</mat-radio-button>
       </mat-radio-group>
     
       <div class="mat-elevation-z8">
-          <table mat-table [dataSource]="ELEMENT_DATA">
+          <table mat-table [dataSource]="dataSource">
         
            
             <ng-container matColumnDef="id">
