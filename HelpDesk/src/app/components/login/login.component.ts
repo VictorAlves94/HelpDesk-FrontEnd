@@ -31,17 +31,10 @@ export class LoginComponent implements OnInit{
 
    },()=>{
     this.toast.error('Usuario e/ou senha inválidos');
-
-   })
+ })
 
   }
   validaCampos():boolean{
     return this.email.valid && this.senha.valid
-    
-    
   }
-
-
-
-
 }
