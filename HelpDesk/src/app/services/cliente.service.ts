@@ -28,7 +28,7 @@ export class ClienteService {
 
   }
   delete(id:any):Observable<Cliente>{
-    return this.http.delete<Cliente>(`${API_CONFIG.baseUrl}/clientes/${id}`)
+    return this.http.delete<Cliente>(`${API_CONFIG.baseUrl}/clientes/${id}`);
 
   }
 

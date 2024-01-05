@@ -8,7 +8,8 @@ import { TecnicoService } from '../../../services/tecnico.service';
 import { ChamadoService } from '../../../services/chamado.service';
 import { Chamado } from '../../../Models/chamado';
 import { ToastrService } from 'ngx-toastr';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-chamado-update',
@@ -45,11 +46,14 @@ export class ChamadoUpdateComponent implements OnInit{
     private clienteService: ClienteService,
     private tecnicoService: TecnicoService,
     private toastService: ToastrService,
-    private router: Router
+    private router: Router,
+    private route: ActivatedRoute
   ){
   }
 
   ngOnInit(): void {
+    this.chamado.id = this.route.snapshot.paramMap.get('id');
+    this.findById()
     this.findAllClientes();
     this.findAllTecnicos();
     
@@ -74,6 +78,25 @@ export class ChamadoUpdateComponent implements OnInit{
       this.toastService.error(ex.error.error);
     })
   }
+  findById():void{
+    this.chamadoService.findById(this.chamado.id).subscribe(resposta => {
+      this.chamado = resposta;
+    },ex =>{
+      this.toastService.error(ex.error.error);
+    })
+
+  }
+
+  update():void{
+    this.chamadoService.update(this.chamado).subscribe(resposta =>{
+      this.toastService.success('Chamado atualizado com sucesso', 'Atualizando chamado');
+      this.router.navigate(['chamados']);
+    }, ex =>{
+      this.toastService.error(ex.error.error);
+    })
+  }
+  
+    
 
   validarCampos():Boolean{
     return this.prioridade.valid &&
@@ -84,3 +107,4 @@ export class ChamadoUpdateComponent implements OnInit{
   }
 
 }
+
