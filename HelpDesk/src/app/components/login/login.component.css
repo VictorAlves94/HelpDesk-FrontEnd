@@ -31,3 +31,6 @@ button  {
 button:hover{
     background-color:rgb(47, 109, 163)!important;
 }
+mat-icon{
+    opacity: .6;
+}

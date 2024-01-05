@@ -4,7 +4,7 @@
 
         <img src="assets/img/pngtree-user-login_resized.jpg">
 
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width" appearance="outline">
 
           <mat-label>E-Mail</mat-label>
           <input
@@ -14,11 +14,12 @@
            name="email"
             matInput 
             placeholder="fulano@mail.com">
+            <mat-icon matSuffix>email</mat-icon>
         </mat-form-field>
 
 
       
-        <mat-form-field class="full-width">
+        <mat-form-field class="full-width" appearance="outline">
             <mat-label>Senha</mat-label>
             <input
             [formControl]="senha"
@@ -28,6 +29,7 @@
               type="password" 
               matInput 
               placeholder="1234">
+              <mat-icon matSuffix>password</mat-icon>
           </mat-form-field>
           
           <button (click)='logar()' [disabled]="!validaCampos()"
