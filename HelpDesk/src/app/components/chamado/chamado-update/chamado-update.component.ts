@@ -9,7 +9,6 @@ import { ChamadoService } from '../../../services/chamado.service';
 import { Chamado } from '../../../Models/chamado';
 import { ToastrService } from 'ngx-toastr';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-chamado-update',
