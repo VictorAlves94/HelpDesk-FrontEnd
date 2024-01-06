@@ -2,7 +2,10 @@
 
 @import '../node_modules/ngx-toastr/toastr.css';
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; 
+  .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field__input {
+    color: black; /* Altere para a cor desejada, por exemplo, preto */
+}}
 
 
 @media only screen and (max-width: 768px) {

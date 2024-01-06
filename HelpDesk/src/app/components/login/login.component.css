@@ -24,6 +24,9 @@ img{
 .full-width{
     width: 100%;
 }
+.text-color-imput {
+    color: black !important; /* Defina a cor desejada (preto) */
+}
 button  {
     color: rgba(0,212,255,1) !important ;
     margin-top: 1.5rem;
