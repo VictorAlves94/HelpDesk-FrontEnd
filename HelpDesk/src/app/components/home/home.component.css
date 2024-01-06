@@ -1,12 +1,17 @@
 .card{
     width: 90%;
+    max-height: 100vh;
     margin: 1rem auto;
     background-color: rgb(235,235, 235);
 }
 img{
-    height: 20rem;
+    border-radius: 4rem;
+    
+    max-width: auto;
+    max-height: 30rem;
+  object-fit: cover;
     margin: 1rem ;
-
+  
 }
 .text{
     color: black;
