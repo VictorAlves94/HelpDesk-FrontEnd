@@ -22,14 +22,28 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;
   
   /* Media Query para celulares com largura de tela de até 480 pixels */
   
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 414px) {
+    /* Estilos para dispositivos com largura até 414 pixels */
     body {
-      font-size: 8px;
-      height: 35%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      /* Ajuste de estilos para celulares */
+        font-size: 8px;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        overflow-x: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
     }
-  }
+
+    /* Adicione estilos específicos para o menu (substitua "seu-menu" pela classe real) */
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        /* Outros estilos do menu */
+    }
+}
