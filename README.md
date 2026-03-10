@@ -42,23 +42,42 @@ Estrutura do projeto
 
 A aplicação segue uma estrutura comum de projetos Angular:
 
+
 src
+
 │
+
 ├── app
+
 │   ├── components
+
 │   │
+
 │   ├── services
+
 │   │
+
 │   ├── views
+
 │   │   ├── chamados
+
 │   │   ├── clientes
+
 │   │   └── tecnicos
+
 │   │
+
 │   ├── app-routing.module.ts
+
 │   └── app.module.ts
+
 │
+
 ├── assets
+
 └── environments
+
+
 Rotas da aplicação
 
 O sistema utiliza Angular Router para navegação entre páginas.
